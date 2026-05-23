@@ -3,57 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms of Service - Smart Attendance</title>
+  <title>Terms of Service — Smart Attendance</title>
 
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f5f7fb;
-      margin:0;
-      padding:0;
-      color:#222;
-      line-height:1.7;
+    :root {
+      --system-bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #86868b;
+      --text-body: #424245;
+      --accent: #0066cc;
+      --border: #d2d2d7;
+      --radius: 20px;
     }
 
-    .container{
-      max-width:900px;
-      margin:auto;
-      padding:40px 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--system-bg);
+      color: var(--text-primary);
+      line-height: 1.5;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1{
-      color:#1565c0;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
-    h2{
-      margin-top:30px;
-      color:#333;
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    p{
-      color:#555;
+    .back-link:hover {
+      text-decoration: underline;
     }
 
-    ul{
-      padding-left:20px;
+    .card {
+      background: var(--card-bg);
+      padding: 50px 45px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
     }
 
-    li{
-      margin-bottom:10px;
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
     }
 
-    .footer{
-      text-align:center;
-      margin-top:30px;
-      color:#777;
-      font-size:14px;
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .meta-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.011em;
+      color: var(--text-primary);
+      margin: 35px 0 12px;
+    }
+
+    p {
+      color: var(--text-body);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    li {
+      position: relative;
+      font-size: 15px;
+      color: var(--text-body);
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-secondary);
+    }
+
+    .highlight-box {
+      background-color: var(--system-bg);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 30px 12px; }
+      .card { padding: 35px 20px; }
+      h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -61,89 +149,65 @@
 <body>
 
 <div class="container">
+  <a href="index.html" class="back-link">← Hub Overview</a>
+
   <div class="card">
-
-    <h1>Terms of Service</h1>
+    <header>
+      <h1>Terms of Service</h1>
+      <div class="meta-date">Last Updated: May 2026</div>
+    </header>
 
     <p>
-      By accessing or using Smart Attendance, you agree to comply with these Terms of Service.
+      Welcome to Smart Attendance. By creating an organization profile, accessing our portals, or checking into structural nodes within our ecosystem, you acknowledge compliance terms outlined below.
     </p>
 
-    <h2>Use of the App</h2>
-
+    <h2>Account Accountability</h2>
+    <p>
+      To sustain workspace operational validation integrity, you agree to protect authentication details and explicitly declare true metrics:
+    </p>
     <ul>
-      <li>You must provide accurate information during registration.</li>
-      <li>You are responsible for maintaining the security of your account.</li>
-      <li>You agree not to misuse the application or attempt unauthorized access.</li>
+      <li>Registration fields must accurately reflect corporate identity markers and official company titles.</li>
+      <li>System users assume strict operational accountability for actions executed from their verified authentication tokens.</li>
+      <li>Attempts to forge client headers or execute unauthorized reads across our collections trigger automated terminal suspension gates.</li>
     </ul>
 
-    <h2>Attendance & Location Verification</h2>
-
+    <h2>Spatial & Telemetry Rules</h2>
     <p>
-      Smart Attendance may use location services to verify attendance authenticity and company presence.
+      The core platform uses client location telemetry during key events to cross-reference presence metrics with organization geo-fences.
     </p>
-
-    <h2>QR Scanning</h2>
-
-    <p>
-      Camera access is used only for attendance-related QR scanning functionality.
-    </p>
-
-    <h2>User Responsibilities</h2>
-
-    <ul>
-      <li>Do not submit false attendance records.</li>
-      <li>Do not attempt to manipulate attendance data.</li>
-      <li>Do not use the app for illegal or harmful purposes.</li>
-    </ul>
-
-    <h2>Account Suspension</h2>
-
-    <p>
-      Smart Attendance reserves the right to suspend or terminate accounts involved in misuse,
-      fraud, or policy violations.
-    </p>
-
-    <h2>Data & Privacy</h2>
-
-    <p>
-      Your use of Smart Attendance is also governed by our Privacy Policy.
-    </p>
-
-    <h2>Service Availability</h2>
-
-    <p>
-      We strive to provide reliable service but do not guarantee uninterrupted availability at all times.
-    </p>
-
-    <h2>Limitation of Liability</h2>
-
-    <p>
-      Smart Attendance shall not be held liable for indirect damages, data loss,
-      or service interruptions beyond reasonable control.
-    </p>
-
-    <h2>Changes to Terms</h2>
-
-    <p>
-      We may update these Terms of Service from time to time.
-      Continued use of the app constitutes acceptance of updated terms.
-    </p>
-
-    <h2>Contact</h2>
-
-    <p>
-      For questions regarding these Terms, contact:
-    </p>
-
-    <p>
-      <strong>Email:</strong> support@smartattendance.app
-    </p>
-
-    <div class="footer">
-      © 2026 Smart Attendance. All rights reserved.
+    <div class="highlight-box">
+      <p><strong>System Limitations:</strong> Any attempt to spoof client location frames, utilize programmatic mock location services, or simulate tracking values violates platform integrity rules and will invalidate attendance data calculations.</p>
     </div>
 
+    <h2>Camera Usage Boundaries</h2>
+    <p>
+      Camera modules operate cleanly to scan structural multi-tenant QR terminal displays. Usage must happen safely without running reverse engineering hooks against the localized decryption loop processing the code matrix.
+    </p>
+
+    <h2>Suspensions & Workspace Audits</h2>
+    <p>
+      Smart Attendance reserves operational rights to flag data logs or freeze multi-tenant company partitions when structural manipulation, telemetry forging, or malicious request spikes are identified.
+    </p>
+
+    <h2>Warranty Declarations & Operational Limits</h2>
+    <p>
+      We deliver our coordination metrics and payroll sheet generation services on an "As-Is" and "As-Available" functional framework. Smart Attendance does not assume liability for business logic calculation dependencies, network provider latencies, or local data gaps stemming from device tracking limits.
+    </p>
+
+    <h2>Modifications</h2>
+    <p>
+      Terms may scale iteratively alongside our software architecture patches. Continued device utilization following systemic distribution updates forms natural compliance agreement with modified layers.
+    </p>
+
+    <h2>Legal Administration Desk</h2>
+    <div class="highlight-box" style="background-color: rgba(0, 102, 204, 0.04); border-left: 3px solid var(--accent);">
+      <p><strong>Formal Compliance Enquiries:</strong><br>
+      <a href="mailto:gautamshubham962@gmail.com" style="font-weight: 600; font-size: 15px;">gautamshubham962@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      © 2026 Smart Attendance. Operational Ecosystem System Agreement.
+    </div>
   </div>
 </div>
 
