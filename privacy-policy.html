@@ -3,63 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - Smart Attendance</title>
+  <title>Privacy Policy — Smart Attendance</title>
 
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f5f7fb;
-      color:#222;
-      margin:0;
-      padding:0;
-      line-height:1.7;
+    :root {
+      --system-bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #86868b;
+      --text-body: #424245;
+      --accent: #0066cc;
+      --border: #d2d2d7;
+      --radius: 20px;
     }
 
-    .container{
-      max-width:900px;
-      margin:auto;
-      padding:40px 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--system-bg);
+      color: var(--text-primary);
+      line-height: 1.5;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1{
-      color:#1565c0;
-      margin-bottom:10px;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
-    h2{
-      margin-top:30px;
-      color:#333;
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      transition: opacity 0.2s ease;
     }
 
-    p{
-      color:#555;
+    .back-link:hover {
+      opacity: 0.8;
     }
 
-    ul{
-      padding-left:20px;
+    .card {
+      background: var(--card-bg);
+      padding: 50px 45px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
     }
 
-    li{
-      margin-bottom:10px;
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
     }
 
-    .footer{
-      text-align:center;
-      margin-top:30px;
-      color:#777;
-      font-size:14px;
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
     }
 
-    a{
-      color:#1565c0;
-      text-decoration:none;
+    .meta-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.011em;
+      color: var(--text-primary);
+      margin: 35px 0 12px;
+    }
+
+    p {
+      color: var(--text-body);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    li {
+      position: relative;
+      font-size: 15px;
+      color: var(--text-body);
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-secondary);
+      font-weight: bold;
+    }
+
+    .highlight-box {
+      background-color: var(--system-bg);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .highlight-box strong {
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 12px;
+      }
+      .card {
+        padding: 35px 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 19px;
+      }
     }
   </style>
 </head>
@@ -67,98 +168,75 @@
 <body>
 
 <div class="container">
+  
+  <a href="index.html" class="back-link">← Hub Overview</a>
+
   <div class="card">
 
-    <h1>Privacy Policy</h1>
+    <header>
+      <h1>Privacy Policy</h1>
+      <div class="meta-date">Last Updated: May 2026</div>
+    </header>
 
     <p>
-      Smart Attendance respects your privacy and is committed to protecting your personal data.
-      This Privacy Policy explains how we collect, use, and protect your information when you use our application.
+      At Smart Attendance, privacy is built into our core philosophy. We believe your workplace operational data should remain confidential, transparently documented, and securely handled. This policy establishes how we collect, process, and protect data points across our application infrastructure.
     </p>
 
-    <h2>Information We Collect</h2>
-
+    <h2>Information Architecture & Collection</h2>
+    <p>
+      To deliver real-time cloud synchronization and reliable workforce validation metrics, the application manages the following variables:
+    </p>
     <ul>
-      <li>User account information such as email address and profile details.</li>
-      <li>Attendance-related information.</li>
-      <li>Location data used for attendance verification and company setup.</li>
-      <li>Camera access used for QR code scanning functionality.</li>
-      <li>Anonymous authentication data for guest access features.</li>
+      <li><strong>Identity Profiles:</strong> Managed email coordinates, access roles, and system-defined naming profiles.</li>
+      <li><strong>Operational Telemetry:</strong> Logged timestamps, verified presence counts, leave applications, and generated payroll sheets.</li>
+      <li><strong>Cryptographic Tokens:</strong> Secure anonymous operational tokens to persist device states safely.</li>
     </ul>
 
-    <h2>How We Use Your Information</h2>
+    <h2>Location Telemetry & Compliance</h2>
+    <p>
+      Smart Attendance relies on intentional location lookups to verify operational geo-fences during critical interactions.
+    </p>
+    <div class="highlight-box">
+      <p><strong>Zero Background Tracking Policy:</strong> Spatial positioning parameters are evaluated only during active user tasks (such as scanning a verification terminal or instantiating a company profile). The ecosystem does not track coordinates when the app is minimized, closed, or idle.</p>
+    </div>
 
+    <h2>Hardware & Camera Interfaces</h2>
+    <p>
+      Camera access is requested exclusively to capture matrix security elements (QR codes). Image arrays are processed directly inside memory scopes locally on-device and are never streamed, stored, or indexed on cloud infrastructure servers.
+    </p>
+
+    <h2>Service Subprocessors</h2>
+    <p>
+      We coordinate with verified cloud providers to guarantee application stability and low-latency workflows. All transmission channels use Transport Layer Security (TLS):
+    </p>
     <ul>
-      <li>To provide attendance and payroll services.</li>
-      <li>To verify attendance locations.</li>
-      <li>To improve app performance and user experience.</li>
-      <li>To maintain security and prevent unauthorized access.</li>
+      <li><strong>Firebase Authentication:</strong> Manages identity state machines and credential gates securely.</li>
+      <li><strong>Cloud Firestore:</strong> Provides structural multi-tenant storage for organization nodes.</li>
+      <li><strong>Firebase Analytics & Crashlytics:</strong> Records anonymous telemetry to pinpoint operational bugs and display performance metrics.</li>
     </ul>
 
-    <h2>Location Permission</h2>
-
+    <h2>Data Security & Retainment Control</h2>
     <p>
-      Location access is used only during attendance verification or company setup.
-      Smart Attendance does not continuously track users in the background without user action.
+      Your records are protected through structural rules layers mapped directly within our backend code. Organization administrators can initiate structured account termination routines directly via their terminal interface.
     </p>
 
-    <h2>Camera Permission</h2>
-
+    <h2>Age Boundaries</h2>
     <p>
-      Camera access is used only for QR code scanning and related attendance features.
+      Our management platforms are tailored strictly for enterprise business workflows and corporate workforce operations. We do not intentionally compile structural entries for individuals under 13 years of age.
     </p>
 
-    <h2>Third-Party Services</h2>
-
+    <h2>Inquiries & Support</h2>
     <p>
-      Smart Attendance may use trusted third-party services including:
+      For formal privacy evaluations, data audit requests, or comprehensive compliance reports, please contact our dedicated support node:
     </p>
-
-    <ul>
-      <li>Firebase Authentication</li>
-      <li>Firebase Firestore</li>
-      <li>Firebase Analytics</li>
-      <li>Firebase Crashlytics</li>
-    </ul>
-
-    <h2>Data Security</h2>
-
-    <p>
-      We implement appropriate security measures to protect user data from unauthorized access,
-      disclosure, or misuse.
-    </p>
-
-    <h2>Data Deletion</h2>
-
-    <p>
-      Users may request deletion of their account and related data through the app settings
-      or by contacting support.
-    </p>
-
-    <h2>Children’s Privacy</h2>
-
-    <p>
-      Smart Attendance is not intended for children under 13 years of age.
-    </p>
-
-    <h2>Changes to This Policy</h2>
-
-    <p>
-      We may update this Privacy Policy from time to time. Changes will be posted on this page.
-    </p>
-
-    <h2>Contact Us</h2>
-
-    <p>
-      If you have any questions regarding this Privacy Policy, contact us at:
-    </p>
-
-    <p>
-      <strong>Email:</strong> support@smartattendance.app
-    </p>
+    
+    <div class="highlight-box" style="background-color: rgba(0, 102, 204, 0.04); border-left: 3px solid var(--accent);">
+      <p><strong>Compliance Communications Address:</strong><br>
+      <a href="mailto:gautamshubham962@gmail.com" style="font-weight: 600; font-size: 15px;">gautamshubham962@gmail.com</a></p>
+    </div>
 
     <div class="footer">
-      © 2026 Smart Attendance. All rights reserved.
+      © 2026 Smart Attendance. Architecture Compliance Profile.
     </div>
 
   </div>
