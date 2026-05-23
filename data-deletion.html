@@ -3,62 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Deletion Policy - Smart Attendance</title>
+  <title>Data Deletion Policy — Smart Attendance</title>
 
   <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f5f7fb;
-      margin:0;
-      padding:0;
-      color:#222;
-      line-height:1.7;
+    :root {
+      --system-bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #86868b;
+      --text-body: #424245;
+      --accent: #0066cc;
+      --border: #d2d2d7;
+      --radius: 20px;
     }
 
-    .container{
-      max-width:900px;
-      margin:auto;
-      padding:40px 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .card{
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--system-bg);
+      color: var(--text-primary);
+      line-height: 1.5;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1{
-      color:#1565c0;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
-    h2{
-      margin-top:30px;
-      color:#333;
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    p{
-      color:#555;
+    .back-link:hover {
+      text-decoration: underline;
     }
 
-    ul{
-      padding-left:20px;
+    .card {
+      background: var(--card-bg);
+      padding: 50px 45px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
     }
 
-    li{
-      margin-bottom:10px;
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
     }
 
-    .footer{
-      text-align:center;
-      margin-top:30px;
-      color:#777;
-      font-size:14px;
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
     }
 
-    a{
-      color:#1565c0;
-      text-decoration:none;
+    .meta-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.011em;
+      color: var(--text-primary);
+      margin: 35px 0 12px;
+    }
+
+    p {
+      color: var(--text-body);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    li {
+      position: relative;
+      font-size: 15px;
+      color: var(--text-body);
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-secondary);
+    }
+
+    .highlight-box {
+      background-color: var(--system-bg);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 30px 12px; }
+      .card { padding: 35px 20px; }
+      h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -66,69 +149,60 @@
 <body>
 
 <div class="container">
+  <a href="index.html" class="back-link">← Hub Overview</a>
+
   <div class="card">
-
-    <h1>Data Deletion Policy</h1>
+    <header>
+      <h1>Account Deletion & Data Purge Policy</h1>
+      <div class="meta-date">Last Updated: May 2026</div>
+    </header>
 
     <p>
-      Smart Attendance respects user privacy and provides users with the ability
-      to request deletion of their account and associated data.
+      Smart Attendance respects your right to control your digital footprint. We provide a straightforward approach to removing your structural records from our system indexes once your operational tenure concludes.
     </p>
 
-    <h2>What Data Can Be Deleted</h2>
-
+    <h2>Scope of Data Purging</h2>
+    <p>
+      Executing a data removal process permanently drops the following parameters from our active multi-tenant collections:
+    </p>
     <ul>
-      <li>User account information</li>
-      <li>Attendance records associated with the account</li>
-      <li>Profile information</li>
-      <li>Authentication-related data</li>
+      <li><strong>Identity Scopes:</strong> User profiles, naming metadata, and secure registration keys.</li>
+      <li><strong>Telemetry Traces:</strong> Associated physical attendance transactions, geo-fence matching metrics, and active check-in/check-out history.</li>
+      <li><strong>Financial Sheets:</strong> Historic individual payroll logs compiled under the employee ID mapping.</li>
     </ul>
 
-    <h2>How to Request Data Deletion</h2>
-
-    <p>
-      Users may request account and data deletion by:
-    </p>
-
-    <ul>
-      <li>Using the delete account option available inside the application settings.</li>
-      <li>Contacting support via email.</li>
-    </ul>
-
-    <h2>Processing Time</h2>
-
-    <p>
-      Deletion requests are generally processed within 7 business days.
-    </p>
-
-    <h2>Data Retention</h2>
-
-    <p>
-      Certain information may be temporarily retained for legal, security,
-      fraud prevention, or operational purposes where required.
-    </p>
-
-    <h2>Third-Party Services</h2>
-
-    <p>
-      Some data may also be processed or stored through trusted third-party services
-      such as Firebase services provided by Google.
-    </p>
-
-    <h2>Contact Us</h2>
-
-    <p>
-      For account deletion or privacy-related requests:
-    </p>
-
-    <p>
-      <strong>Email:</strong> support@smartattendance.app
-    </p>
-
-    <div class="footer">
-      © 2026 Smart Attendance. All rights reserved.
+    <h2>Methods to Request Purging</h2>
+    <p>Data termination sequences can be triggered via two clean compliance pathways:</p>
+    
+    <div class="highlight-box">
+      <p><strong>Option A: Native In-App Execution</strong><br>
+      Navigate to your Application Profile Panel -> Settings -> Account Operations -> Select "Delete Account". This triggers an automated cascading removal inside Firestore.</p>
     </div>
 
+    <div class="highlight-box">
+      <p><strong>Option B: Manual Desk Escalation</strong><br>
+      If you can no longer log in or prefer a system review, submit an intentional tracking request from your registered email node directly to our support desk.</p>
+    </div>
+
+    <h2>Processing Timelines</h2>
+    <p>
+      Automated operations inside the application complete instant replication across server blocks immediately. Email escalations require credential verification protocols and complete processing routines inside <strong>7 business days</strong>.
+    </p>
+
+    <h2>Immutable Retention Limits</h2>
+    <p>
+      Please note that workspace history, administrative operational company models, and corporate regulatory sheets might be retained under the active account of the primary employer entity if required for formal labor law compliance or anti-fraud verification.
+    </p>
+
+    <h2>Contact Desk</h2>
+    <div class="highlight-box" style="background-color: rgba(0, 102, 204, 0.04); border-left: 3px solid var(--accent);">
+      <p><strong>Data Operations Registry:</strong><br>
+      <a href="mailto:gautamshubham962@gmail.com" style="font-weight: 600; font-size: 15px;">gautamshubham962@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      © 2026 Smart Attendance. Privacy Architecture Infrastructure.
+    </div>
   </div>
 </div>
 
