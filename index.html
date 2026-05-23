@@ -1,22 +1,432 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Smart Attendance Legal</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Smart Attendance</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f7fb;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+    }
+
+    .card{
+      background:white;
+      border-radius:32px;
+      padding:50px 35px;
+      box-shadow:0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+      width:130px;
+      height:130px;
+      margin:auto;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+      margin-bottom:25px;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    h1{
+      text-align:center;
+      font-size:52px;
+      color:#1565c0;
+      margin-bottom:15px;
+    }
+
+    .subtitle{
+      text-align:center;
+      font-size:22px;
+      color:#555;
+      max-width:800px;
+      margin:auto;
+      line-height:1.7;
+    }
+
+    .section{
+      margin-top:70px;
+    }
+
+    .section-title{
+      font-size:34px;
+      margin-bottom:20px;
+      color:#1565c0;
+      text-align:center;
+    }
+
+    .section-text{
+      max-width:900px;
+      margin:auto;
+      color:#555;
+      line-height:1.9;
+      font-size:17px;
+      text-align:center;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .feature-card{
+      background:#f8fbff;
+      padding:30px;
+      border-radius:22px;
+      transition:0.3s;
+      border:1px solid #e5edf8;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .feature-card h3{
+      margin-bottom:15px;
+      color:#1565c0;
+      font-size:22px;
+    }
+
+    .feature-card p{
+      color:#666;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .workflow{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .step{
+      background:white;
+      border:1px solid #e6eef8;
+      padding:25px;
+      border-radius:20px;
+      text-align:center;
+    }
+
+    .step-number{
+      width:50px;
+      height:50px;
+      background:#1565c0;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      margin:auto;
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:18px;
+    }
+
+    .step h4{
+      margin-bottom:12px;
+      color:#1565c0;
+      font-size:20px;
+    }
+
+    .step p{
+      color:#666;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:16px;
+      margin-top:60px;
+    }
+
+    .btn{
+      padding:15px 28px;
+      border-radius:16px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    .primary{
+      background:#1565c0;
+      color:white;
+    }
+
+    .primary:hover{
+      background:#0d47a1;
+    }
+
+    .secondary{
+      background:#eef5ff;
+      color:#1565c0;
+    }
+
+    .secondary:hover{
+      background:#dcecff;
+    }
+
+    .footer{
+      margin-top:70px;
+      text-align:center;
+      color:#777;
+      font-size:15px;
+      line-height:1.8;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:38px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+
+      .card{
+        padding:40px 22px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
-<body style="font-family:Arial;text-align:center;padding:50px;background:#f5f7fb;">
+<body>
 
-<h1>Smart Attendance</h1>
+<section class="hero">
 
-<p>Legal Pages</p>
+  <div class="container">
 
-<p>
-  <a href="privacy-policy.html">Privacy Policy</a>
-</p>
+    <div class="card">
 
-<p>
-  <a href="terms.html">Terms of Service</a>
-</p>
+      <div class="logo">
+        <img src="logo.png" alt="Smart Attendance Logo">
+      </div>
+
+      <h1>Smart Attendance</h1>
+
+      <p class="subtitle">
+        A modern employee attendance and workforce management platform designed
+        to simplify attendance tracking, QR verification, payroll operations,
+        and real-time workforce management for businesses and organizations.
+      </p>
+
+      <div class="section">
+
+        <h2 class="section-title">Who We Are</h2>
+
+        <p class="section-text">
+          Smart Attendance is a secure cloud-based attendance management solution
+          built to help businesses manage employees efficiently using modern
+          technologies such as QR attendance, real-time location verification,
+          Firebase cloud synchronization, and automated attendance workflows.
+          Our mission is to make attendance management faster, smarter, and more reliable
+          for teams of all sizes.
+        </p>
+
+      </div>
+
+      <div class="section">
+
+        <h2 class="section-title">Core Features</h2>
+
+        <div class="features">
+
+          <div class="feature-card">
+            <h3>QR Attendance</h3>
+
+            <p>
+              Employees can securely mark attendance using QR code scanning
+              with fast and reliable verification.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Location Verification</h3>
+
+            <p>
+              Smart Attendance uses location validation during attendance
+              marking to improve accuracy and workplace verification.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Employee Management</h3>
+
+            <p>
+              Employers can manage employees, attendance records,
+              payroll workflows, and workforce operations in one place.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Cloud Synchronization</h3>
+
+            <p>
+              Real-time Firebase cloud synchronization keeps employee
+              data securely updated across devices.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Secure Authentication</h3>
+
+            <p>
+              Secure user authentication with support for account login
+              and protected workforce access management.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Modern User Experience</h3>
+
+            <p>
+              Clean, responsive, and optimized user interface designed
+              for modern Android devices and workforce productivity.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section">
+
+        <h2 class="section-title">How Smart Attendance Works</h2>
+
+        <div class="workflow">
+
+          <div class="step">
+
+            <div class="step-number">1</div>
+
+            <h4>Create Company</h4>
+
+            <p>
+              Employers can create and configure their company workspace
+              and employee management system.
+            </p>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">2</div>
+
+            <h4>Add Employees</h4>
+
+            <p>
+              Employees can join the company and securely access attendance features.
+            </p>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">3</div>
+
+            <h4>Verify Attendance</h4>
+
+            <p>
+              Employees mark attendance using QR verification and
+              secure location validation.
+            </p>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">4</div>
+
+            <h4>Manage Workforce</h4>
+
+            <p>
+              Employers can monitor attendance, payroll workflows,
+              and employee operations in real time.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="buttons">
+
+        <a class="btn primary" href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a class="btn secondary" href="terms.html">
+          Terms of Service
+        </a>
+
+        <a class="btn secondary" href="data-deletion.html">
+          Data Deletion Policy
+        </a>
+
+      </div>
+
+      <div class="footer">
+
+        Smart Attendance © 2026 <br>
+
+        Secure Workforce Management Platform <br><br>
+
+        Support: support@smartattendance.app
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 </html>
